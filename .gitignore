@@ -1,0 +1,13 @@
+node_modules
+dist
+.turbo
+.env
+.env.local
+*.log
+.DS_Store
+.screenshots
+
+certs
+apps/server/data
+apps/server/models
+mcp.json

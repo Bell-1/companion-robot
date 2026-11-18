@@ -1,0 +1,30 @@
+{
+  "name": "companion-bot",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Bell-1/companion-robot.git"
+  },
+  "packageManager": "pnpm@11.7.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "dev": "pnpm stop && turbo run dev",
+    "build": "turbo run build",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "stop": "bash scripts/stop.sh",
+    "tunnel": "env -u HTTPS_PROXY -u HTTP_PROXY -u https_proxy -u http_proxy ngrok http 5173",
+    "cert": "bash scripts/dev-cert.sh",
+    "voiceprint:model": "node scripts/fetch-voiceprint-model.mjs",
+    "clean": "turbo run clean"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1",
+    "turbo": "^2.5.8",
+    "typescript": "^5.9.3"
+  }
+}

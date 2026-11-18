@@ -1,0 +1,11 @@
+packages:
+  - "apps/*"
+  - "packages/*"
+
+onlyBuiltDependencies:
+  - esbuild
+
+# ws 的可选原生加速模块，纯 JS 版本已够用
+allowBuilds:
+  bufferutil: false
+  utf-8-validate: false
